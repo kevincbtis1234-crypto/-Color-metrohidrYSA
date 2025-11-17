@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorímetro hidrYSA - Calidad del Agua</title>
+    <style>
+        /* COLORES SOLICITADOS */
+        /* Fondo del Cuerpo: #9DF584 */
+        /* Encabezado de Tablas (th): #00a5007e (Verde semi-transparente) */
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 10px; /* Reducir padding general para pantallas pequeñas */
+            background-color: #9DF584; 
+            color: #333;
+        }
+        .container {
+            width: 100%; /* El contenedor toma todo el ancho disponible */
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 15px; /* Reducir padding interno */
+            border-radius: 8px; /* Valor fijo para bordes */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #008000;
+            text-align: center;
+            border-bottom: 3px solid #008000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em; /* Ajuste para móvil */
+        }
+        h2 {
+            color: #00aa00;
+            margin-top: 25px; /* Reducir margen superior */
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            font-size: 1.3em; /* Ajuste para móvil */
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        /* Estilos de Tabla */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0; /* Reducir margen de tabla */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            overflow: hidden;
+            display: block; /* Habilitar el desplazamiento horizontal si es necesario */
+            overflow-x: auto; /* Permite el scroll horizontal en tablas anchas */
+            white-space: nowrap; /* Evita que el contenido de la tabla se rompa */
+        }
+        
+        /* Estilos específicos para celdas y encabezados dentro de la tabla */
+        th, td {
+            border: 1px solid #008000;
+            padding: 10px; /* Reducir padding de celdas para móvil */
+            text-align: left;
+            font-size: 0.85em; /* Reducir tamaño de fuente en tabla */
+            white-space: normal; /* Permite que el texto se ajuste dentro de la celda */
+        }
+        
+        th {
+            background-color: #00a5007e;
+            color: #000000;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8em; /* Reducción adicional para el encabezado */
+        }
+        
+        tr:nth-child(even), tr:nth-child(odd) {
+            background-color: #a2ff9285;
+        }
+        
+        /* Estilo para Referencias */
+        .references {
+            font-size: 0.75em; /* Reducir tamaño de fuente para referencias */
+            color: #555;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #ccc;
+        }
+        
+        /* Media Query: Mejoras específicas para pantallas aún más pequeñas (smartphones) */
+        @media (max-width: 600px) {
+            body {
+                padding: 5px;
+            }
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+            /* Opcional: Revertir la tabla a comportamiento normal si el contenido cabe sin scroll, 
+               pero para tablas de 3 o más columnas, es mejor mantener el overflow-x: auto. */
+            table {
+                 overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Colorímetro hidrYSA</h1>
+
+    <p>Bienvenido a hidrYSA, una herramienta diseñada para interpretar de manera rápida y visual la calidad del agua utilizada en la agricultura.</p>
+
+    <p>Nuestro biosensor utiliza reactivos químicos (col morada, cúrcuma y azul de metileno) que cambian de color al entrar en contacto con el agua, permitiendo identificar posibles alteraciones químicas o contaminantes.</p>
+
+    <p>Al escanear el código QR y observar el color obtenido por medio de la colocación de 2 a 3 gotitas del agua a verificar en las almohadillas reactivas, podrá conocer el significado de cada variación y comprender mejor el estado del recurso hídrico que utiliza.</p>
+
+    <p>Este sistema busca no solo facilitar la toma de decisiones en el campo, sino también promover la conciencia sobre la importancia del cuidado y uso responsable del agua.</p>
+
+    <h1>Colorímetro. </h1>
+
+    <h2>Almohadilla 1 (Extracto de col morada) </h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Color que aparece</th>
+                <th>Significado</th>
+                <th>Qué hacer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Rosa / Rojo</td>
+                <td>Agua ácida </td>
+                <td>Evitar riego directo. Aplicar encalado al suelo. Usar solo en limpieza o control de plagas. </td>
+            </tr>
+            <tr>
+                <td>Morado</td>
+                <td>Agua neutral / buena </td>
+                <td>Es adecuada para riego. </td>
+            </tr>
+            <tr>
+                <td>Verde /Azul</td>
+                <td>Agua alcalina </td>
+                <td>Neutralizar suelos ácidos. Ajustar con fertilizantes acidificantes o mezclar con agua neutra. </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Almohadilla 2 (Cúrcuma) </h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Color que aparece</th>
+                <th>Significado</th>
+                <th>Qué hacer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Amarillo</td>
+                <td>Agua normal </td>
+                <td>Es adecuada para riego. </td>
+            </tr>
+            <tr>
+                <td>Naranja / Rojizo</td>
+                <td>Agua con sustancias alcalinas fuertes </td>
+                <td>Posible contaminación química. No usar en cultivos. Mesclar en agua neutra en grandes volúmenes. </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Almohadilla 3 (Azul de metileno) </h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Color que aparece</th>
+                <th>Significado</th>
+                <th>Qué hacer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Azul fuerte</td>
+                <td>Agua limpia, buena oxigenación </td>
+                <td>Apta para riego. </td>
+            </tr>
+            <tr>
+                <td>Transparente / sin color</td>
+                <td>Agua con gérmenes o materia orgánica </td>
+                <td>Requiere tratamiento o filtración. </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>El agua que se usa para riego afecta la salud del suelo, el rendimiento de los cultivos y la seguridad alimentaria. Usar fuentes limpias, evitar el vertido de agroquímicos cerca de pozos, reciclar agua de forma segura y monitorear la calidad periódicamente ayuda a conservar recursos y proteger a la comunidad. Si detecta cambios anormales en el sensor, revisa prácticas de manejo (fertilización y almacenamiento) y considerar un análisis profesional.</p>
+
+    <div class="references">
+        <h2>Referencias bibliográficas </h2>
+        <p>Mercalab.(s.f.). Azul de metileno: Todo lo que debes de saber sobre su uso. Mercalab. Recuperado de <a href="http://mercalad.com/blogs/noticias/azul-metileno." target="_blank">http://mercalad.com/blogs/noticias/azul-metileno.</a> </p>
+        <p>Benemérita Universidad Autónoma de Puebla. (s.f.) Propiedades químicas de la cúrcuma como indicador natural. Revista digital BUAP. Recuperado de <a href="https://rd,buap,mx/ojs-rdicuap/index,php/rdicuap/article/vie/1584" target="_blank">https://rd,buap,mx/ojs-rdicuap/index,php/rdicuap/article/vie/1584</a> </p>
+        <p>Museo de Ciencias de la Universidad de Navarra. (s.f) Indicador de ph con col lombarda. Universidad de Navarra. Recuperado de <a href="https://museodeciencias.unav,edu/documents/1114000/32632495/indicador-ph.pdf" target="_blank">https://museodeciencias.unav,edu/documents/1114000/32632495/indicador-ph.pdf</a> </p>
+    </div>
+
+</div>
+
+</body>
+</html>
